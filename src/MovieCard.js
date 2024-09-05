@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import StarRatingComponent from 'react-star-rating-component';
 
 const MovieCard = ({movie}) => {
@@ -24,11 +25,10 @@ const MovieCard = ({movie}) => {
                 {movie.Description}
                 </p>
               </div>
-             
-            </div>
-            <div class="blur_back "></div>
-      </div>
-            
+            <Link to={'/trailer/${movie.id}'}> <button> Trailer </button></Link>
+            <div class="blur_back "> </div>
+      </div>       
+    </div>
     </div>
   )
 }
